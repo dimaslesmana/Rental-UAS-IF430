@@ -36,7 +36,7 @@ class BaseController extends Controller
 	 *
 	 * @var array
 	 */
-	protected $helpers = [];
+	protected $helpers = ['url', 'text', 'number'];
 
 	/**
 	 * Constructor.
@@ -54,5 +54,14 @@ class BaseController extends Controller
 		// Preload any models, libraries, etc, here.
 		//--------------------------------------------------------------------
 		// E.g.: $this->session = \Config\Services::session();
+
+		// Libraries
+		session();
+		$this->validation = \Config\Services::validation();
+		$this->pager = \Config\Services::pager();
+
+		// Models
+		$this->userModel = new \App\Models\UserModel();
+		$this->productModel = new \App\Models\ProductModel();
 	}
 }

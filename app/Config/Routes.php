@@ -34,6 +34,25 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
+$routes->group('auth', function ($routes) {
+	$routes->post('login', 'Auth::doLogin');
+	$routes->post('register', 'Auth::newUser');
+	$routes->get('login', 'Auth::login');
+	$routes->get('register', 'Auth::register');
+});
+
+$routes->group('dashboard', ['filter' => 'admin_auth'], function ($routes) {
+	$routes->get('products', 'Dashboard::productList');
+});
+
+$routes->group('user', ['filter' => 'user_auth'], function ($routes) {
+
+});
+
+$routes->group('hotels', function ($routes) {
+
+});
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

@@ -1,0 +1,76 @@
+CREATE DATABASE IF NOT EXISTS `uas_pemweb_lec`;
+USE `uas_pemweb_lec`;
+
+SET FOREIGN_KEY_CHECKS = 0;
+
+CREATE TABLE `user_roles` (
+	`role_id` CHAR(5) NOT NULL PRIMARY KEY,
+	`role_name` VARCHAR(255) NOT NULL
+)engine=innoDB;
+
+CREATE TABLE `user_accounts` (
+	`id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	`uid` VARCHAR(15) NOT NULL UNIQUE,
+	`role_id` CHAR(5) NOT NULL,
+	`name` VARCHAR(255) NOT NULL,
+	`email` VARCHAR(255) NOT NULL UNIQUE,
+	`password` VARCHAR(255) NOT NULL,
+	`address` VARCHAR(255) NOT NULL,
+	`phone_number` VARCHAR(15) NOT NULL,
+	`created_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
+	`updated_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
+
+	FOREIGN KEY(role_id) REFERENCES user_roles(role_id) ON UPDATE CASCADE
+)engine=innoDB;
+
+CREATE TABLE `user_carts` (
+	`id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	`uid` VARCHAR(15) NOT NULL,
+	`product_id` INT NOT NULL,
+
+	FOREIGN KEY(uid) REFERENCES user_accounts(uid) ON UPDATE CASCADE,
+	FOREIGN KEY(product_id) REFERENCES product_list(id) ON UPDATE CASCADE
+)engine=innoDB;
+
+CREATE TABLE `product_list` (
+	`id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	`name` VARCHAR(255) NOT NULL,
+	`price` INT UNSIGNED NOT NULL,
+	`quantity` INT UNSIGNED NOT NULL,
+	`description` LONGTEXT NOT NULL,
+	`image` MEDIUMTEXT NOT NULL,
+	`created_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
+	`updated_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
+	`deleted_at` DATETIME
+)engine=innoDB;
+
+CREATE TABLE `order_list` (
+	`id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	`order_id` VARCHAR(10) NOT NULL,
+	`user_email` VARCHAR(15) NOT NULL,
+	`product_id` INT NOT NULL,
+	`duration_in_days` INT NOT NULL,
+	`status` ENUM('sedang_dikirim', 'sudah_dikirim', 'siap_di_pickup', 'selesai') NOT NULL,
+
+	FOREIGN KEY(user_email) REFERENCES user_accounts(email) ON UPDATE CASCADE,
+	FOREIGN KEY(product_id) REFERENCES product_list(id) ON UPDATE CASCADE
+)engine=innoDB;
+
+
+INSERT INTO `user_roles` (`role_id`, `role_name`) VALUES
+('R0001', 'Admin'),
+('R0002', 'User');
+
+INSERT INTO `product_list` (`name`, `price`, `quantity`, `description`, `image`) VALUES
+('Barang 1', 100000, 10, 'Deskripsi Barang 1', 'placeholder.png'),
+('Barang 2', 200000, 20, 'Deskripsi Barang 2', 'placeholder.png'),
+('Barang 3', 300000, 30, 'Deskripsi Barang 3', 'placeholder.png'),
+('Barang 4', 400000, 40, 'Deskripsi Barang 4', 'placeholder.png'),
+('Barang 5', 500000, 50, 'Deskripsi Barang 5', 'placeholder.png'),
+('Barang 6', 600000, 60, 'Deskripsi Barang 6', 'placeholder.png'),
+('Barang 7', 700000, 70, 'Deskripsi Barang 7', 'placeholder.png'),
+('Barang 8', 800000, 80, 'Deskripsi Barang 8', 'placeholder.png'),
+('Barang 9', 900000, 90, 'Deskripsi Barang 9', 'placeholder.png'),
+('Barang 10', 1000000, 100, 'Deskripsi Barang 10', 'placeholder.png');
+
+SET FOREIGN_KEY_CHECKS = 1;
