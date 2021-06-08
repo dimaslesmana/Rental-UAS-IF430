@@ -49,7 +49,7 @@ $routes->group('user', ['filter' => 'user_auth'], function ($routes) {
 
 });
 
-$routes->group('hotels', function ($routes) {
+$routes->group('rentals', function ($routes) {
 
 });
 

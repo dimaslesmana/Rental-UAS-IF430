@@ -7,7 +7,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-12">
-                    <h1 class="m-0">View Hotel List</h1>
+                    <h1 class="m-0">View Product List</h1>
                 </div>
             </div>
         </div>
