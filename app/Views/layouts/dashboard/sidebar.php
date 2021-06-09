@@ -2,7 +2,7 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="/" target="_blank" class="brand-link">
-        <img src="/assets/img/uhotel2.png" alt="U-Rental Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <img src="/assets/img/u-rental-white-1.png" alt="U-Rental Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
         <span class="brand-text font-weight-light"><?= $sidebar_title; ?></span>
     </a>
 
@@ -41,10 +41,18 @@
                     </a>
                 </li>
 
+                <li class="nav-header">ORDERS</li>
+                <li class="nav-item">
+                    <a href="/dashboard/orders" class="nav-link">
+                        <i class="nav-icon fas fa-list"></i>
+                        <p>View Order List</p>
+                    </a>
+                </li>
+
                 <li class="nav-header">PRODUCTS</li>
                 <li class="nav-item">
                     <a href="/dashboard/products/add" class="nav-link">
-                        <i class="nav-icon fas fa-hotel"></i>
+                        <i class="nav-icon fas fa-gamepad"></i>
                         <p>Add Product</p>
                     </a>
                 </li>

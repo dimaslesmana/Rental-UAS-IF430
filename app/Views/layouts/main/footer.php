@@ -1,38 +1,37 @@
 <footer class="bg-dark text-white">
     <div class="container py-4">
-        <div class="row py-5">
-            <div class="col-md-4 mb-3 mb-md-0">
-                <h6 class="text-uppercase mb-3">Customer services</h6>
-                <ul class="list-unstyled mb-0">
-                    <li><a class="footer-link" href="#">Help &amp; Contact Us</a></li>
-                    <li><a class="footer-link" href="#">Returns &amp; Refunds</a></li>
-                    <li><a class="footer-link" href="#">Online Stores</a></li>
-                    <li><a class="footer-link" href="#">Terms &amp; Conditions</a></li>
+        <div class="row py-5 m-auto text-center">
+            <div class="col-md-4 col-sm-12 mb-3 mb-md-0">
+                <div class="d-flex align-items-center justify-content-center mb-3">
+                    <img class="rounded-circle" src="/assets/img/u-rental-rounded.png" alt="" width="70" style="margin: -18px;">
+                    <span class="text-uppercase text-small font-weight-bold text-white ml-2">U-Rental</span>
+                </div>
+                <p class="text-muted text-small font-weight-light mb-3">Jl. Scientia Boulevard, Gading, Kec. Serpong, Tangerang, Banten 15227.</p>
+                <ul class="list-inline mb-0 text-white">
+                    <li class="list-inline-item"><a class="reset-anchor text-small" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="list-inline-item"><a class="reset-anchor text-small" href="#"><i class="fab fa-github"></i></a></li>
+                    <li class="list-inline-item"><a class="reset-anchor text-small" href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li class="list-inline-item"><a class="reset-anchor text-small" href="#"><i class="fab fa-linkedin"></i></a></li>
                 </ul>
             </div>
             <div class="col-md-4 mb-3 mb-md-0">
-                <h6 class="text-uppercase mb-3">Company</h6>
+                <h6 class="text-uppercase mb-3">Useful links</h6>
                 <ul class="list-unstyled mb-0">
-                    <li><a class="footer-link" href="#">What We Do</a></li>
-                    <li><a class="footer-link" href="#">Available Services</a></li>
-                    <li><a class="footer-link" href="#">Latest Posts</a></li>
-                    <li><a class="footer-link" href="#">FAQs</a></li>
+                    <li><a class="footer-link" href="/rents">Rents</a></li>
+                    <li><a class="footer-link" href="/rents/cart">Cart</a></li>
+                    <li><a class="footer-link" href="/auth/register">Register</a></li>
+                    <li><a class="footer-link" href="/about">About</a></li>
                 </ul>
             </div>
             <div class="col-md-4">
-                <h6 class="text-uppercase mb-3">Social media</h6>
-                <ul class="list-unstyled mb-0">
-                    <li><a class="footer-link" href="#">Twitter</a></li>
-                    <li><a class="footer-link" href="#">Instagram</a></li>
-                    <li><a class="footer-link" href="#">Tumblr</a></li>
-                    <li><a class="footer-link" href="#">Pinterest</a></li>
-                </ul>
+                <h6 class="text-uppercase mb-3">Info</h6>
+                <p class="text-muted">Website ini merupakan website yang dibuat untuk memenuhi ujian akhir mata kuliah Pemrograman Web.</p>
             </div>
         </div>
         <div class="border-top pt-4" style="border-color: #1d1d1d !important">
             <div class="row">
                 <div class="col-lg-6">
-                    <p class="small text-muted mb-0">&copy; 2020 &bull; U-Rental &bull; All rights reserved.</p>
+                    <p class="small text-muted mb-0">&copy; 2021 &bull; U-Rental &bull; All rights reserved.</p>
                 </div>
                 <div class="col-lg-6 text-lg-right">
                     <p class="small text-muted mb-0">Template designed by <a class="text-white reset-anchor" href="https://bootstraptemple.com/p/bootstrap-ecommerce">Bootstrap Temple</a></p>
@@ -80,11 +79,11 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <!-- Custom Script -->
 <?php
-    if (!empty($custom_js)) {
-        foreach($custom_js as $js) {
-            echo $js;
-        }
+if (!empty($custom_js)) {
+    foreach ($custom_js as $js) {
+        echo $js;
     }
+}
 ?>
 </div>
 </body>

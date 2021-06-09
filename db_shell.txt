@@ -51,6 +51,8 @@ CREATE TABLE `order_list` (
 	`product_id` INT NOT NULL,
 	`duration_in_days` INT NOT NULL,
 	`status` ENUM('sedang_dikirim', 'sudah_dikirim', 'siap_di_pickup', 'selesai') NOT NULL,
+	`created_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
+	`updated_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
 
 	FOREIGN KEY(user_email) REFERENCES user_accounts(email) ON UPDATE CASCADE,
 	FOREIGN KEY(product_id) REFERENCES product_list(id) ON UPDATE CASCADE
@@ -62,15 +64,25 @@ INSERT INTO `user_roles` (`role_id`, `role_name`) VALUES
 ('R0002', 'User');
 
 INSERT INTO `product_list` (`name`, `price`, `quantity`, `description`, `image`) VALUES
-('Barang 1', 100000, 10, 'Deskripsi Barang 1', 'placeholder.png'),
-('Barang 2', 200000, 20, 'Deskripsi Barang 2', 'placeholder.png'),
-('Barang 3', 300000, 30, 'Deskripsi Barang 3', 'placeholder.png'),
-('Barang 4', 400000, 40, 'Deskripsi Barang 4', 'placeholder.png'),
-('Barang 5', 500000, 50, 'Deskripsi Barang 5', 'placeholder.png'),
-('Barang 6', 600000, 60, 'Deskripsi Barang 6', 'placeholder.png'),
-('Barang 7', 700000, 70, 'Deskripsi Barang 7', 'placeholder.png'),
-('Barang 8', 800000, 80, 'Deskripsi Barang 8', 'placeholder.png'),
-('Barang 9', 900000, 90, 'Deskripsi Barang 9', 'placeholder.png'),
-('Barang 10', 1000000, 100, 'Deskripsi Barang 10', 'placeholder.png');
+('Playstation 1', 10000, 10, 'Konsol generasi pertama yang diciptakan oleh Sony lalu diluncurkan pada tahun 1994.', 'placeholder.png'),
+('Playstation 2', 20000, 10, 'Konsol generasi kedua yang diciptakan oleh Sony lalu diluncurkan di Tokyo pada tahun 2000.', 'placeholder.png'),
+('Playstation 3', 30000, 10, 'Konsol generasi ketiga yang terbit pada tahun 2006 di Jepang dengan membawa beberapa pembaruan seperti grafis lebih baik dan kontroler DualShock 3.', 'placeholder.png'),
+('Playstation 4', 40000, 10, 'Konsol generasi keempat di tahun 2013 oleh Sony yang sudah mendukung full HD.', 'placeholder.png'),
+('Playstation 5', 50000, 10, 'Konsol terbaru dari Sony pada generasi kelima pada tahun 2020 dengan prosesor dan GPU custom dari AMD.', 'placeholder.png'),
+('Xbox 360', 30000, 10, 'Konsol yang diperkenalkan secara resmi pada tahun 2005 milik Microsoft, konsol pertama yang dapat memutar film HD-DVD.', 'placeholder.png'),
+('Xbox 360 s', 30000, 10, 'Konsol dengan model kedua dari Xbox 360 yang diperkenalkan secara resmi pada tahun 2010.', 'placeholder.png'),
+('Xbox 360 E', 30000, 10, 'Konsol dengan model ketiga dan terakhir dari Xbox 360 yang muncul pada tahun 2013.', 'placeholder.png'),
+('Xbox One', 40000, 10, 'Konsol generasi ketiga yang diumumkan pada tahun 2013, dan menjadi penerus dari Xbox 360.', 'placeholder.png'),
+('Xbox One S', 40000, 10, 'Konsol yang dibuat untuk melanjutkan model dari Xbox one, dan diterbitkan pada tahun 2016.', 'placeholder.png'),
+('Xbox One X', 45000, 10, 'Sama seperti One S, Xbox X merupakan model lanjutan dari Xbox One namun versi lebih mahal yang terbit pada tahun 2017.', 'placeholder.png'),
+('Xbox Series X', 50000, 10, 'Konsol Xbox generasi terbaru yaitu keempat yang rilis pada tahun 2020.', 'placeholder.png'),
+('Xbox Series S', 45000, 10, 'Konsol Xbox generasi keempat yang dibuat lebih rendah dari Xbox series X.', 'placeholder.png'),
+('Nintendo 2DS', 20000, 10, 'Konsol yang diproduksi oleh Nintendo pada tahun 2013, yang merupakan versi entry-level dari Nintendo 3DS.', 'placeholder.png'),
+('Nintendo 3DS', 15000, 10, 'Konsol dari Nintendo yang terbit pada tahun 2010 sebagai penerus dari Nintendo DS.', 'placeholder.png'),
+('Nintendo Switch', 50000, 10, 'Konsol video game yang dikembangkan oleh Nintendo dan dirilis pada tahun 2017. Konsol ini merupakan perangkat protabel yang disambungkan dengan kontroler Joy-Con.', 'placeholder.png'),
+('Nintendo Switch Lite', 45000, 10, 'Konsole yang rilis pada tahun 2019 yang dikembangkan oleh Sony. Berbeda dengan Nintendo Switch yang portable, console ini tidak portable seperti kakaknya.', 'placeholder.png'),
+('Nintendo Wii', 20000, 10, 'Konsol permainan video kelima dari Nintendo yang mana penerus dari Nintendo GameCube dengan inovasi utamanya yaitu kontroler (joystick).', 'placeholder.png'),
+('Nintendo Wii U', 25000, 10, 'Konsol penerus dari Wii yang dikembangkan oleh Nintendo dan dirilis pada akhir tahun 2012.', 'placeholder.png'),
+('Nintendo NES Classic Edition', 20000, 10, 'Konsol replika mini dari NES yang dikembangkan oleh Nintendo dan dirilis pada tahun 2016.', 'placeholder.png');
 
 SET FOREIGN_KEY_CHECKS = 1;

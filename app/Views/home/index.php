@@ -20,76 +20,25 @@
             <h2 class="h5 text-uppercase mb-4">Top trending products</h2>
         </header>
         <div class="row">
-            <div class="col-xl-3 col-lg-4 col-sm-6">
-                <div class="product text-center">
-                    <div class="position-relative mb-3">
-                        <a class="d-block" href="#"><img class="img-fluid w-100" src="/assets/img/temp/product-1.jpg" alt="..."></a>
-                        <div class="product-overlay">
-                            <ul class="mb-0 list-inline">
-                                <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="#">Add to cart</a></li>
-                            </ul>
+            <?php foreach ($products as $product) : ?>
+                <div class="col-xl-3 col-lg-4 col-sm-6">
+                    <div class="product text-center">
+                        <div class="position-relative mb-3">
+                            <a class="d-block" href="/rents/detail/<?= $product['id']; ?>"><img class="img-fluid w-100" src="/assets/img/products/<?= $product['image']; ?>" alt="<?= $product['name']; ?>"></a>
+                            <div class="product-overlay">
+                                <ul class="mb-0 list-inline">
+                                    <form action="/rents/addCart" method="post">
+                                        <input type="hidden" name="product_id" value="<?= $product['id']; ?>">
+                                        <button class="btn btn-dark btn-sm" type="submit">Add to cart</button>
+                                    </form>
+                                </ul>
+                            </div>
                         </div>
+                        <h6><a class="reset-anchor" href="#"><?= $product['name']; ?></a></h6>
+                        <p class="small text-muted"><?= number_to_currency($product['price'], 'IDR'); ?> / day</p>
                     </div>
-                    <h6> <a class="reset-anchor" href="#">Kui Ye Chen’s AirPods</a></h6>
-                    <p class="small text-muted">$250</p>
                 </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-sm-6">
-                <div class="product text-center">
-                    <div class="position-relative mb-3">
-                        <a class="d-block" href="#"><img class="img-fluid w-100" src="/assets/img/temp/product-2.jpg" alt="..."></a>
-                        <div class="product-overlay">
-                            <ul class="mb-0 list-inline">
-                                <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="#">Add to cart</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <h6> <a class="reset-anchor" href="#">Air Jordan 12 gym red</a></h6>
-                    <p class="small text-muted">$300</p>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-sm-6">
-                <div class="product text-center">
-                    <div class="position-relative mb-3">
-                        <a class="d-block" href="#"><img class="img-fluid w-100" src="/assets/img/temp/product-3.jpg" alt="..."></a>
-                        <div class="product-overlay">
-                            <ul class="mb-0 list-inline">
-                                <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="#">Add to cart</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <h6> <a class="reset-anchor" href="#">Cyan cotton t-shirt</a></h6>
-                    <p class="small text-muted">$25</p>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-sm-6">
-                <div class="product text-center">
-                    <div class="position-relative mb-3">
-                        <a class="d-block" href="#"><img class="img-fluid w-100" src="/assets/img/temp/product-4.jpg" alt="..."></a>
-                        <div class="product-overlay">
-                            <ul class="mb-0 list-inline">
-                                <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="#">Add to cart</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <h6> <a class="reset-anchor" href="#">Timex Unisex Originals</a></h6>
-                    <p class="small text-muted">$351</p>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-sm-6">
-                <div class="product text-center">
-                    <div class="position-relative mb-3">
-                        <a class="d-block" href="#"><img class="img-fluid w-100" src="/assets/img/temp/product-5.jpg" alt="..."></a>
-                        <div class="product-overlay">
-                            <ul class="mb-0 list-inline">
-                                <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-dark" href="#">Add to cart</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <h6> <a class="reset-anchor" href="#">Red digital smartwatch</a></h6>
-                    <p class="small text-muted">$250</p>
-                </div>
-            </div>
+            <?php endforeach; ?>
         </div>
     </section>
     <!-- SERVICES-->

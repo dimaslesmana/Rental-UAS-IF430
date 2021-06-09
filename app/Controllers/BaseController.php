@@ -63,5 +63,7 @@ class BaseController extends Controller
 		// Models
 		$this->userModel = new \App\Models\UserModel();
 		$this->productModel = new \App\Models\ProductModel();
+		$this->orderModel = new \App\Models\OrderModel();
+		$this->cartModel = new \App\Models\CartModel();
 	}
 }

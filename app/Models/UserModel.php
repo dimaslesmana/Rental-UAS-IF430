@@ -42,7 +42,8 @@ class UserModel extends Model
         return $this->where(['phone_number' => $phoneNumber])->first();
     }
 
-    public function countUser() {
+    public function countUser()
+    {
         return $this->countAll();
     }
 }
