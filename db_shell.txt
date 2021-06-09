@@ -70,7 +70,7 @@ INSERT INTO `product_list` (`name`, `price`, `quantity`, `description`, `image`)
 ('Playstation 4', 40000, 10, 'Konsol generasi keempat di tahun 2013 oleh Sony yang sudah mendukung full HD.', 'placeholder.png'),
 ('Playstation 5', 50000, 10, 'Konsol terbaru dari Sony pada generasi kelima pada tahun 2020 dengan prosesor dan GPU custom dari AMD.', 'placeholder.png'),
 ('Xbox 360', 30000, 10, 'Konsol yang diperkenalkan secara resmi pada tahun 2005 milik Microsoft, konsol pertama yang dapat memutar film HD-DVD.', 'placeholder.png'),
-('Xbox 360 s', 30000, 10, 'Konsol dengan model kedua dari Xbox 360 yang diperkenalkan secara resmi pada tahun 2010.', 'placeholder.png'),
+('Xbox 360 S', 30000, 10, 'Konsol dengan model kedua dari Xbox 360 yang diperkenalkan secara resmi pada tahun 2010.', 'placeholder.png'),
 ('Xbox 360 E', 30000, 10, 'Konsol dengan model ketiga dan terakhir dari Xbox 360 yang muncul pada tahun 2013.', 'placeholder.png'),
 ('Xbox One', 40000, 10, 'Konsol generasi ketiga yang diumumkan pada tahun 2013, dan menjadi penerus dari Xbox 360.', 'placeholder.png'),
 ('Xbox One S', 40000, 10, 'Konsol yang dibuat untuk melanjutkan model dari Xbox one, dan diterbitkan pada tahun 2016.', 'placeholder.png'),
