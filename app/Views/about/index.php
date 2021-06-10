@@ -113,7 +113,7 @@
                                 </div>
                                 <div>
                                     <h5 class="mb-1">Email:</h5>
-                                    <p><small>dimas.lesmana@student.umn.ac.id</small></p>
+                                    <p><small>u-rent@email.com</small></p>
                                 </div>
                             </div>
                             <div class="d-flex mb-3">
@@ -124,7 +124,7 @@
                                 </div>
                                 <div>
                                     <h5 class="mb-1">Call:</h5>
-                                    <p><small>+62 xxx xxxx xxxx</small></p>
+                                    <p><small>+62 012 3456 7890</small></p>
                                 </div>
                             </div>
                         </div>
