@@ -108,6 +108,7 @@
                             </li>
                             <li>
                                 <form action="/rents/checkout" method="post">
+                                    <?= csrf_field(); ?>
                                     <div class="form-group mb-0">
                                         <input type="hidden" id="email" name="email" value="<?= session()->get('email'); ?>">
                                         <?php foreach ($carts as $cart) : ?>
