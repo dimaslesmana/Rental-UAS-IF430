@@ -47,7 +47,7 @@ CREATE TABLE `product_list` (
 CREATE TABLE `order_list` (
 	`id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	`order_id` VARCHAR(10) NOT NULL,
-	`user_email` VARCHAR(15) NOT NULL,
+	`user_email` VARCHAR(255) NOT NULL,
 	`product_id` INT NOT NULL,
 	`duration_in_days` INT NOT NULL,
 	`status` ENUM('sedang_dikirim', 'sudah_dikirim', 'siap_di_pickup', 'selesai') NOT NULL,
