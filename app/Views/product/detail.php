@@ -39,6 +39,7 @@
                     </div>
                     <div class="col-sm-12">
                         <form action="/rents/addCart" method="post">
+                            <?= csrf_field(); ?>
                             <input type="hidden" name="product_id" value="<?= $product['id']; ?>">
                             <?php if ($product['quantity'] > 0) : ?>
                                 <button class="btn btn-dark btn-block" type="submit">Add to cart</button>
