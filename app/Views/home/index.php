@@ -6,8 +6,8 @@
     <div class="container-fluid py-5">
         <div class="row px-4 px-lg-5">
             <div class="col-lg-6">
-                <p class="small text-uppercase mb-2">New Inspiration 2020</p>
-                <h1 class="h2 text-uppercase mb-3">20% off on new season</h1><a class="btn btn-dark" href="/rents">Browse collections</a>
+                <p class="small text-uppercase mb-2">U-Rental</p>
+                <h1 class="h2 text-uppercase mb-3">Rates so low, you won’t think twice</h1><a class="btn btn-dark" href="/rents">Browse console</a>
             </div>
         </div>
     </div>
@@ -38,7 +38,7 @@
                         </svg>
                         <div class="media-body text-left ml-3">
                             <h6 class="text-uppercase mb-1">24 x 7 service</h6>
-                            <p class="text-small mb-0 text-muted">Free shipping worlwide</p>
+                            <p class="text-small mb-0 text-muted">Non-stop</p>
                         </div>
                     </div>
                 </div>
@@ -50,8 +50,8 @@
                             <use xlink:href="#label-tag-1"> </use>
                         </svg>
                         <div class="media-body text-left ml-3">
-                            <h6 class="text-uppercase mb-1">Festival offer</h6>
-                            <p class="text-small mb-0 text-muted">Free shipping worlwide</p>
+                            <h6 class="text-uppercase mb-1">Discount</h6>
+                            <p class="text-small mb-0 text-muted">For first rental</p>
                         </div>
                     </div>
                 </div>
