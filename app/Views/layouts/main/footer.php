@@ -74,6 +74,10 @@
     // while using file:// protocol
     // pls don't forget to change to your domain :)
     injectSvgSprite('/assets/icons/orion-svg-sprite.svg');
+
+    $(document).ready(function() {
+        $(".preloader").fadeOut('slow');
+    });
 </script>
 <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">

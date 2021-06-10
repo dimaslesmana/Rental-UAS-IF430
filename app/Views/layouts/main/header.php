@@ -42,6 +42,11 @@
 </head>
 
 <body>
+    <div class="preloader">
+        <div class="loading">
+            <img src="/assets/img/u-rental-rounded.png" width="150">
+        </div>
+    </div> 
     <div class="page-holder">
         <header class="header bg-white">
             <div class="container px-0 px-lg-3">
