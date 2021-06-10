@@ -2,33 +2,33 @@
 
 <?= $this->section('main-content'); ?>
 
-<div class="container">
-    <!-- HERO SECTION-->
-    <section class="py-5 bg-light">
-        <div class="container">
-            <div class="row px-4 px-lg-5 py-lg-4 align-items-center">
-                <div class="col-lg-6">
-                    <h1 class="h2 text-uppercase mb-0">Cart</h1>
-                </div>
-                <div class="col-lg-6 text-lg-right">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-lg-end mb-0 px-0">
-                            <li class="breadcrumb-item"><a href="/">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Cart</li>
-                        </ol>
-                    </nav>
-                </div>
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row px-4 px-lg-5 py-lg-4 align-items-center">
+            <div class="col-lg-6">
+                <h1 class="h2 text-uppercase mb-0">Cart</h1>
+            </div>
+            <div class="col-lg-6 text-lg-right">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-lg-end mb-0 px-0">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Cart</li>
+                    </ol>
+                </nav>
             </div>
         </div>
-    </section>
-    <section class="py-5">
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
         <h2 class="h5 text-uppercase mb-4">Shopping cart</h2>
         <div class="row">
             <div class="col-lg-8 mb-4 mb-lg-0">
                 <!-- CART TABLE-->
-                <div class="table-responsive mb-4">
+                <div class="table-responsive">
 
-                    <table class="table">
+                    <table class="table mb-0">
                         <thead class="bg-light">
                             <tr>
                                 <th class="border-0" scope="col"> <strong class="text-small text-uppercase">Product</strong></th>
@@ -68,7 +68,7 @@
                                 <?php endforeach; ?>
                             <?php else : ?>
                                 <tr>
-                                    <td colspan="3" class="text-center">Cart is still empty!</td>
+                                    <td colspan="4" class="text-center">Cart is still empty!</td>
                                 </tr>
                             <?php endif; ?>
                         </tbody>
@@ -114,7 +114,7 @@
                                             <input type="hidden" name="product_id[]" value="<?= $cart['id']; ?>">
                                         <?php endforeach; ?>
                                         <input type="hidden" id="duration" name="duration_in_days" value="">
-                                        <button id="rent-btn" class="btn btn-dark btn-sm btn-block" type="submit" disabled>Rent</button>
+                                        <button id="rent-btn" class="btn btn-dark btn-block" type="submit" disabled>Rent</button>
                                     </div>
                                 </form>
                             </li>
@@ -123,7 +123,8 @@
                 </div>
             </div>
         </div>
-    </section>
-</div>
+    </div>
+</section>
+
 
 <?= $this->endSection(); ?>

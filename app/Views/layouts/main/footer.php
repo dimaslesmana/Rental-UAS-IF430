@@ -3,8 +3,8 @@
         <div class="row py-5 m-auto text-center">
             <div class="col-md-4 col-sm-12 mb-3 mb-md-0">
                 <div class="d-flex align-items-center justify-content-center mb-3">
-                    <img class="rounded-circle" src="/assets/img/u-rental-rounded.png" alt="" width="70" style="margin: -18px;">
-                    <span class="text-uppercase text-small font-weight-bold text-white ml-2">U-Rental</span>
+                    <img class="rounded-circle" src="/assets/img/u-rental-rounded.png" alt="logo" width="70" style="margin: -18px;">
+                    <span class="text-uppercase text-small font-weight-bold text-white ml-3">U-Rental</span>
                 </div>
                 <p class="text-muted text-small font-weight-light mb-3">Jl. Scientia Boulevard, Gading, Kec. Serpong, Tangerang, Banten 15227.</p>
                 <ul class="list-inline mb-0 text-white">

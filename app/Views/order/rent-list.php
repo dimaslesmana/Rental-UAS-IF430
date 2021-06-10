@@ -2,8 +2,24 @@
 
 <?= $this->section('main-content'); ?>
 
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row px-4 px-lg-5 py-lg-4 align-items-center">
+            <div class="col-lg-6">
+                <h1 class="h2 text-uppercase mb-0">Order</h1>
+            </div>
+            <div class="col-lg-6 text-lg-right">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-lg-end mb-0 px-0">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Order</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
 <div class="container my-5">
-    <h1 class="mb-3">Order List</h1>
     <?php if (!empty($rent_list)) : ?>
         <?php foreach ($rent_list as $rent) : ?>
             <div class="row mb-4">
