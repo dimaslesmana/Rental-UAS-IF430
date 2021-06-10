@@ -23,11 +23,13 @@ class Dashboard extends BaseController
 	private function admin()
 	{
 
+		$totalIncome = implode('', $this->orderModel->getTotalIncome());
+
 		$data = [
 			'title' => "U-Rental | Dashboard - Home",
 			'sidebar_title' => "U-Rental",
 			'order_count' => implode('', $this->orderModel->countOrders()),
-			'total_income' => implode('', $this->orderModel->getTotalIncome()),
+			'total_income' => $totalIncome ? $totalIncome : 0,
 			'user_count' => $this->userModel->countUser(),
 		];
 
